@@ -93,3 +93,12 @@ auto factorial = [](int n) -> int {
     return (n <= 1) ? 1 : n * factorial(n-1); // 错误：factorial 尚未完全定义
 };
 ~~~
+
+## 在Leetcode里使用lambda
+* 写递归函数
+~~~
+ auto dfs = [&](this auto&& dfs, int i) -> void {
+        dfs 逻辑...
+        };
+
+~~~
